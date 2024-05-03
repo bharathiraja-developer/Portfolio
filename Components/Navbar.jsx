@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Navbar.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   return (
@@ -23,33 +24,23 @@ function Navbar() {
       >
         <ul className="navbar-nav ms-3">
           <li className="nav-item">
-            <button
-              className="nav-link btn btn-outline-primary"
-              type="button"
-              href="#home"
-            >
-              Home
+            <button className="nav-link btn btn-outline-primary" type="button">
+              <Link to="home">Home</Link>
             </button>
           </li>
           <li className="nav-item ">
-            <button className="nav-link btn btn-outline-primary" href="#about">
-              About
+            <button className="nav-link btn btn-outline-primary">
+              <Link to="about">About</Link>
             </button>
           </li>
           <li className="nav-item">
-            <button
-              className="nav-link btn btn-outline-primary"
-              href="#project"
-            >
-              Projects
+            <button className="nav-link btn btn-outline-primary">
+              <Link to="project">Projects</Link>
             </button>
           </li>
           <li className="nav-item">
-            <button
-              className="nav-link btn btn-outline-primary"
-              href="#contact"
-            >
-              Contact
+            <button className="nav-link btn btn-outline-primary">
+              <Link to="contact">Contact</Link>
             </button>
           </li>
         </ul>

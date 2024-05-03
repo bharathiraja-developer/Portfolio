@@ -38,5 +38,10 @@
 
 #home{
     background-image: url(../src/images/cloudBg.png);
-    height: 500px;
+    height: 680px;
+    background-repeat: no-repeat;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
 }
