@@ -4,7 +4,7 @@ import "../Styles/Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="navbar-brand ms-3">Bharathiraja</div>
+      <div className="navbar-brand ms-3 fw-medium">𝕭𝖍𝖆𝖗𝖆𝖙𝖍𝖎𝖗𝖆𝖏𝖆</div>
       <button
         className="navbar-toggler me-3"
         type="button"
