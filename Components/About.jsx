@@ -9,7 +9,7 @@ function About() {
         <h1 className="d-flex justify-content-center fw-bolder">About Me</h1>
       </div>
       <div className="row">
-        <h3 className="text-primary ms-3 fw-bold">A bit about me</h3>
+        <h3 className="text-primary ms-3 fw-bold mt-3">A bit about me</h3>
         <p className="ms-3 fs-5 mt-3">
           I'm a self-taught web developer with experience in designing new
           features from ideation to production, implementation of wireframes and
@@ -31,7 +31,7 @@ function About() {
 
       <div className="row ms-4 mb-3">
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -53,7 +53,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">Mongo DB</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -75,7 +75,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">Express</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -97,7 +97,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">NodeJS</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -121,7 +121,7 @@ function About() {
       </div>
       <div className="row ms-4 mb-3">
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -143,7 +143,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">HTML</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -165,7 +165,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">CSS</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -187,7 +187,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">Bootstrap</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -209,9 +209,9 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">Redux</h4>
         </motion.div>
       </div>
-      <div className="row ms-4 mb-3">
+      <div className="row ms-4 mb-5">
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -233,7 +233,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">Javascript</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -255,7 +255,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">React</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,
@@ -277,7 +277,7 @@ function About() {
           <h4 className="d-inline fs-6 ms-2 fw-normal">Git</h4>
         </motion.div>
         <motion.div
-          className="py-2 px-4 mt-6 flex align-items-center col"
+          className="py-2 px-4 mt-6 flex align-items-center col-6 col-lg-3"
           initial={{
             opacity: 0,
             y: 50,

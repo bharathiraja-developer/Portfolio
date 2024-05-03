@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/Home.css";
+import { motion } from "framer-motion";
 
 function Home() {
   const [type, setType] = useState(" ");
@@ -95,13 +96,27 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="col-6 image">
+          <motion.div
+            className="col-6 image"
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{ once: false }}
+          >
             <img
               src="../src/images/image.svg"
               height="450px"
               width="650px"
             ></img>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
