@@ -20,7 +20,7 @@
 }
 
 .bigSize{
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bolder;
 }
 .image {
@@ -33,6 +33,12 @@
     }
     .image{
         display: inline;
+    }
+}
+@media screen and (min-width: 576px) {
+    .bigSize{
+        font-size: 42px;
+        font-weight: bolder;
     }
 }
 

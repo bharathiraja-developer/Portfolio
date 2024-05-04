@@ -12,7 +12,7 @@ function Projects() {
       </div>
       <div className="row justify-content-center mt-4">
         <motion.div
-          className="card col-12 col-lg-5 mx-auto"
+          className="card col-10 col-lg-5 mx-auto"
           initial={{
             opacity: 0,
             x: -50,
@@ -48,7 +48,7 @@ function Projects() {
           </div>
         </motion.div>
         <motion.div
-          className="card col-12 col-lg-5 mx-auto mt-4 mt-lg-0"
+          className="card col-10 col-lg-5 mx-auto mt-4 mt-lg-0"
           initial={{
             opacity: 0,
             x: 50,
@@ -86,7 +86,7 @@ function Projects() {
       </div>
       <div className="row justify-content-center mt-4">
         <motion.div
-          className="card col-12 col-lg-5 mx-auto"
+          className="card col-10 col-lg-5 mx-auto"
           initial={{
             opacity: 0,
             x: -50,
@@ -121,7 +121,7 @@ function Projects() {
           </div>
         </motion.div>
         <motion.div
-          className="card col-12 col-lg-5 mx-auto mt-4 mt-lg-0"
+          className="card col-10 col-lg-5 mx-auto mt-4 mt-lg-0"
           initial={{
             opacity: 0,
             x: 50,
@@ -158,7 +158,7 @@ function Projects() {
       </div>
       <div className="row justify-content-center mt-4">
         <motion.div
-          className="card col-12 col-lg-5 mx-auto"
+          className="card col-10 col-lg-5 mx-auto"
           initial={{
             opacity: 0,
             x: -50,
@@ -193,7 +193,7 @@ function Projects() {
           </div>
         </motion.div>
         <motion.div
-          className="card col-12 col-lg-5 mx-auto mt-4 mt-lg-0"
+          className="card col-10 col-lg-5 mx-auto mt-4 mt-lg-0"
           initial={{
             opacity: 0,
             x: 50,

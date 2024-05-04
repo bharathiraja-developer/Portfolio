@@ -46,7 +46,7 @@ function Home() {
   }
 
   return (
-    <div id="home" className="container-fluid ">
+    <div id="home" className="container-fluid mt-5">
       <div className="container">
         <div className="row">
           <div className="col mt-4 mt-lg-5">
