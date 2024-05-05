@@ -57,7 +57,7 @@ function Home() {
             <div className="col-12">
               <p className="fs-4 fw-normal w-75 mt-3">
                 I am a MERN Stack Developer. I am currently looking forward to
-                kickstart my carrer.
+                kick start my carrer.
               </p>
             </div>
             <div className="col-12 mt-5">
@@ -111,11 +111,7 @@ function Home() {
             }}
             viewport={{ once: false }}
           >
-            <img
-              src="../src/images/image.svg"
-              height="450px"
-              width="650px"
-            ></img>
+            <img src="image.svg" height="450px" width="650px"></img>
           </motion.div>
         </div>
       </div>
