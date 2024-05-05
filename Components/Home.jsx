@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Styles/Home.css";
 import { motion } from "framer-motion";
 import home from "../image.svg";
+import resume from "../Bharathiraja B.pdf";
 
 function Home() {
   const [type, setType] = useState(" ");
@@ -88,7 +89,7 @@ function Home() {
               </div>
               <div className="d-flex justify-content-center mt-2">
                 <a
-                  href="https://drive.google.com/file/d/1nPNnxHIaq39BhxjDUpL63a1ZrE8_AXpj/view"
+                  href={resume}
                   target="_blank"
                   className="btn btn-primary btn-lg w-25"
                 >
