@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/Home.css";
 import { motion } from "framer-motion";
+import home from "../image.svg";
 
 function Home() {
   const [type, setType] = useState(" ");
@@ -111,7 +112,7 @@ function Home() {
             }}
             viewport={{ once: false }}
           >
-            <img src="image.svg" height="450px" width="650px"></img>
+            <img src={home} height="450px" width="650px"></img>
           </motion.div>
         </div>
       </div>
