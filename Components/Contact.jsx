@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Contact.css";
+import axios from "axios";
 
 function Contact() {
+  const [msg, setMsg] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [load, setLoad] = useState(false);
+  const [done, setDone] = useState(false);
   return (
     <div className="container mt-5" id="contact">
       <div className="row">
@@ -16,23 +24,64 @@ function Contact() {
       </div>
       <div className="row">
         <div className="col-12 col-lg-5 ms-3">
-          <form>
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setLoad(true);
+              await axios
+                .post("https://portfolio-backend-iogk.onrender.com/api/send", {
+                  name: msg.name,
+                  email: msg.email,
+                  message: msg.message,
+                })
+                .then(() => {
+                  setMsg({
+                    name: "",
+                    email: "",
+                    message: "",
+                  });
+                  setLoad(false);
+                  setDone(true);
+                  setTimeout(() => {
+                    setDone(false);
+                  }, [5000]);
+                });
+            }}
+          >
             <label className="form-label fw-medium fs-5" htmlFor="name">
               Name
             </label>
             <input
+              id="name"
               className="form-control"
+              placeholder="Enter your name"
+              value={msg.name}
+              required={true}
+              onChange={(e) => {
+                setMsg({
+                  name: e.target.value,
+                  email: msg.email,
+                  message: msg.message,
+                });
+              }}
               style={{
                 backgroundColor: "#374151",
                 color: "white",
               }}
-              id="name"
-              placeholder="Enter your name"
             ></input>
             <label className="form-label fw-medium fs-5 mt-3" htmlFor="email">
               Email
             </label>
             <input
+              required={true}
+              value={msg.email}
+              onChange={(e) => {
+                setMsg({
+                  name: msg.name,
+                  email: e.target.value,
+                  message: msg.message,
+                });
+              }}
               className="form-control"
               style={{
                 backgroundColor: "#374151",
@@ -45,6 +94,15 @@ function Contact() {
               Message
             </label>
             <textarea
+              required={true}
+              value={msg.message}
+              onChange={(e) => {
+                setMsg({
+                  name: msg.name,
+                  email: msg.email,
+                  message: e.target.value,
+                });
+              }}
               className="form-control"
               style={{
                 backgroundColor: "#374151",
@@ -55,9 +113,28 @@ function Contact() {
               placeholder="Enter your message"
             ></textarea>
             <div className="d-flex justify-content-end">
-              <button className="btn btn-primary mt-3" type="submit">
-                Send
-              </button>
+              {load ? (
+                <button className="btn btn-primary mt-3" type="submit" disabled>
+                  <span
+                    className="spinner-border spinner-border-sm"
+                    aria-hidden="true"
+                  ></span>
+                  <span role="status">Loading...</span>
+                </button>
+              ) : (
+                <button className="btn btn-primary mt-3" type="submit">
+                  Send
+                </button>
+              )}
+            </div>
+            <div className="d-flex justify-content-center">
+              {done ? (
+                <p className="text-success d-block fs-3">
+                  Message sent successfully
+                </p>
+              ) : (
+                <p></p>
+              )}
             </div>
           </form>
         </div>
