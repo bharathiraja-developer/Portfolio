@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/About.css";
 import { motion } from "framer-motion";
+import MySql from "../mysql-logo-svgrepo-com.svg";
 
 function About() {
   return (
@@ -291,11 +292,7 @@ function About() {
           }}
           viewport={{ once: false }}
         >
-          <img
-            alt=""
-            src="../src/images/mysql-logo-svgrepo-com.svg"
-            className="image1"
-          ></img>
+          <img alt="" src={MySql} className="image1"></img>
           <h4 className="d-inline fs-6 ms-2 fw-normal">MySQl</h4>
         </motion.div>
       </div>
