@@ -1,5 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import bike from "../rent-bike-logo-101992_101992-original.webp";
+import url from "../url-shortener.jpg";
+import todo from "../todo.jpg";
+import router from "../router.png";
+import mobile from "../mobilestore-future.png";
+import crud from "../CRUD.jpeg";
 
 function Projects() {
   return (
@@ -27,7 +33,7 @@ function Projects() {
           viewport={{ once: false }}
         >
           <img
-            src="rent-bike-logo-101992_101992-original.webp"
+            src={bike}
             height="250px"
             className="card-img-top"
             alt="..."
@@ -63,7 +69,7 @@ function Projects() {
           viewport={{ once: false }}
         >
           <img
-            src="url-shortener.jpg"
+            src={url}
             height="250px"
             className="card-img-top"
             alt="..."
@@ -101,7 +107,7 @@ function Projects() {
           viewport={{ once: false }}
         >
           <img
-            src="mobilestore-future.png"
+            src={mobile}
             height="250px"
             className="card-img-top"
             alt="..."
@@ -136,7 +142,7 @@ function Projects() {
           viewport={{ once: false }}
         >
           <img
-            src="CRUD.jpeg"
+            src={crud}
             height="250px"
             className="card-img-top"
             alt="..."
@@ -173,7 +179,7 @@ function Projects() {
           viewport={{ once: false }}
         >
           <img
-            src="router.png"
+            src={router}
             height="250px"
             className="card-img-top"
             alt="..."
@@ -208,7 +214,7 @@ function Projects() {
           viewport={{ once: false }}
         >
           <img
-            src="todo.jpg"
+            src={todo}
             height="250px"
             className="card-img-top"
             alt="..."
