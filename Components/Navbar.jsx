@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Styles/Navbar.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-function Navbar() {
+function Navbar({ setShow }) {
   const [value, setValue] = useState([true, false, false, false]);
   const [scroll, setScroll] = useState(window.scrollY);
   function changeActive(index) {
@@ -21,22 +21,30 @@ function Navbar() {
     if (window.innerWidth < 730) {
       if (window.scrollY < 665) {
         setValue([true, false, false, false]);
+        setShow(true);
       } else if (window.scrollY < 1610) {
         setValue([false, true, false, false]);
+        setShow(false);
       } else if (window.scrollY < 4320) {
         setValue([false, false, true, false]);
+        setShow(false);
       } else {
         setValue([false, false, false, true]);
+        setShow(false);
       }
     } else {
       if (window.scrollY < 612) {
         setValue([true, false, false, false]);
+        setShow(true);
       } else if (window.scrollY < 1260) {
         setValue([false, true, false, false]);
+        setShow(false);
       } else if (window.scrollY < 2720) {
         setValue([false, false, true, false]);
+        setShow(false);
       } else {
         setValue([false, false, false, true]);
+        setShow(false);
       }
     }
   }, [1000]);
@@ -75,6 +83,7 @@ function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   changeActive(0);
+                  setShow(true);
                 }}
               >
                 Home
@@ -94,6 +103,7 @@ function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   changeActive(1);
+                  setShow(false);
                 }}
               >
                 About
@@ -113,6 +123,7 @@ function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   changeActive(2);
+                  setShow(false);
                 }}
               >
                 Projects
@@ -132,6 +143,7 @@ function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   changeActive(3);
+                  setShow(false);
                 }}
               >
                 Contact

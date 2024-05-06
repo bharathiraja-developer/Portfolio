@@ -5,7 +5,7 @@ import home from "../image.svg";
 import resume from "../Bharathiraja B.pdf";
 import { TypeAnimation } from "react-type-animation";
 
-function Home() {
+function Home({ show }) {
   return (
     <div id="home" className="container-fluid mt-5">
       <div className="container">
@@ -14,21 +14,25 @@ function Home() {
             <h1 className="bigSize text-dark">Hi, I am Bharathiraja</h1>
 
             <h1 className="box">
-              <TypeAnimation
-                className="typingtext bigSize text-primary"
-                sequence={[
-                  "Frontend Developer",
-                  1000,
-                  "React JS Developer",
-                  1000,
-                  "Node JS Developer",
-                  1000,
-                  "MERN Stack Developer",
-                  1000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
+              {show ? (
+                <TypeAnimation
+                  className="typingtext bigSize text-primary"
+                  sequence={[
+                    "Frontend Developer",
+                    1000,
+                    "React JS Developer",
+                    1000,
+                    "Node JS Developer",
+                    1000,
+                    "MERN Stack Developer",
+                    1000,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              ) : (
+                <div className="bigSize text-primary">MERN Stack Developer</div>
+              )}
             </h1>
             <div className="col-12">
               <p className="fs-4 fw-normal w-75 mt-3">
