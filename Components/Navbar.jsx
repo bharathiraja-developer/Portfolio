@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "../Styles/Navbar.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-function Navbar({ setShow }) {
+function Navbar({ setShow, mood, setMood }) {
   const [value, setValue] = useState([true, false, false, false]);
-  const [scroll, setScroll] = useState(window.scrollY);
   function changeActive(index) {
     let newValue = [];
     for (let i = 0; i < value.length; i++) {
@@ -50,19 +49,61 @@ function Navbar({ setShow }) {
   }, [1000]);
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top bg-white">
-      <div className="navbar-brand ms-3 fw-medium">𝕭𝖍𝖆𝖗𝖆𝖙𝖍𝖎𝖗𝖆𝖏𝖆</div>
-      <button
-        className="navbar-toggler me-3"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#Externalcontent"
-        aria-controls="Externalcontent"
-        aria-expanded="false"
-        aria-label="Toggle Navigation"
+    <nav
+      className={
+        mood
+          ? "navbar navbar-expand-lg fixed-top bg-white"
+          : "navbar navbar-expand-lg fixed-top bg-dark"
+      }
+    >
+      <div
+        className={
+          mood
+            ? "navbar-brand ms-3 fw-medium"
+            : "navbar-brand ms-3 fw-medium text-white"
+        }
       >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+        𝕭𝖍𝖆𝖗𝖆𝖙𝖍𝖎𝖗𝖆𝖏𝖆
+      </div>
+
+      <div>
+        <a
+          href=""
+          onClick={(e) => {
+            e.preventDefault();
+            setMood(!mood);
+          }}
+        >
+          {mood ? (
+            <img
+              className="justify-content-end me-2"
+              width="30"
+              height="30"
+              src="https://img.icons8.com/fluency/48/sun.png"
+              alt="sun"
+            ></img>
+          ) : (
+            <img
+              className="me-3"
+              width="30"
+              height="30"
+              src="https://img.icons8.com/emoji/48/000000/crescent-moon-emoji.png"
+              alt="crescent-moon-emoji"
+            />
+          )}
+        </a>
+        <button
+          className="navbar-toggler me-3 bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Externalcontent"
+          aria-controls="Externalcontent"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
       <div
         className="collapse navbar-collapse justify-content-end me-3"
@@ -75,7 +116,9 @@ function Navbar({ setShow }) {
               className={
                 value[0]
                   ? "nav-link btn btn-outline-primary active text-white me-2"
-                  : "nav-link btn btn-outline-primary me-2"
+                  : mood
+                  ? "nav-link btn btn-outline-primary me-2"
+                  : "nav-link btn btn-outline-primary me-2 text-white"
               }
             >
               <Link
@@ -95,7 +138,9 @@ function Navbar({ setShow }) {
               className={
                 value[1]
                   ? "nav-link btn btn-outline-primary active text-white me-2"
-                  : "nav-link btn btn-outline-primary me-2"
+                  : mood
+                  ? "nav-link btn btn-outline-primary me-2"
+                  : "nav-link btn btn-outline-primary me-2 text-white"
               }
             >
               <Link
@@ -115,7 +160,9 @@ function Navbar({ setShow }) {
               className={
                 value[2]
                   ? "nav-link btn btn-outline-primary active text-white me-2"
-                  : "nav-link btn btn-outline-primary me-2"
+                  : mood
+                  ? "nav-link btn btn-outline-primary me-2"
+                  : "nav-link btn btn-outline-primary me-2 text-white"
               }
             >
               <Link
@@ -135,7 +182,9 @@ function Navbar({ setShow }) {
               className={
                 value[3]
                   ? "nav-link btn btn-outline-primary active text-white me-2"
-                  : "nav-link btn btn-outline-primary me-2"
+                  : mood
+                  ? "nav-link btn btn-outline-primary me-2"
+                  : "nav-link btn btn-outline-primary me-2 text-white"
               }
             >
               <Link

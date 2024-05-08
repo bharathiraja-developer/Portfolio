@@ -5,13 +5,15 @@ import home from "../image.svg";
 import resume from "../Bharathiraja B.pdf";
 import { TypeAnimation } from "react-type-animation";
 
-function Home({ show }) {
+function Home({ show, mood }) {
   return (
-    <div id="home" className="container-fluid mt-5">
+    <div id={mood ? "home" : "home1"} className="container-fluid mt-5">
       <div className="container">
         <div className="row">
           <div className="col mt-4 mt-lg-5">
-            <h1 className="bigSize text-dark">Hi, I am Bharathiraja</h1>
+            <h1 className={mood ? "bigSize text-dark" : "bigSize text-white"}>
+              Hi, I am Bharathiraja
+            </h1>
 
             <h1 className="box">
               {show ? (
@@ -35,7 +37,13 @@ function Home({ show }) {
               )}
             </h1>
             <div className="col-12">
-              <p className="fs-4 fw-normal w-75 mt-3">
+              <p
+                className={
+                  mood
+                    ? "fs-4 fw-normal w-75 mt-3"
+                    : "fs-4 fw-normal w-75 mt-3 text-white"
+                }
+              >
                 I am a MERN Stack Developer. I am currently looking forward to
                 kick start my carrer.
               </p>
@@ -46,12 +54,23 @@ function Home({ show }) {
                   href="https://github.com/bharathiraja-developer"
                   target="_blank"
                 >
-                  <img
-                    width="48"
-                    height="48"
-                    src="https://img.icons8.com/sf-regular/48/github.png"
-                    alt="github"
-                  />
+                  {mood ? (
+                    <img
+                      width="48"
+                      height="48"
+                      src="https://img.icons8.com/sf-regular/48/github.png"
+                      alt="github"
+                    />
+                  ) : (
+                    <img
+                      style={{ marginTop: "6px" }}
+                      width="36"
+                      height="36"
+                      className="bg-white rounded"
+                      src="https://img.icons8.com/sf-regular/48/github.png"
+                      alt="github"
+                    />
+                  )}
                 </a>
                 <a
                   href="https://www.linkedin.com/in/bharathi-raja-0ab1a521a/"

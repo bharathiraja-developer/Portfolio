@@ -20,7 +20,7 @@
 }
 
 .bigSize{
-    font-size: 38px;
+    font-size: 34px;
     font-weight: bolder;
 }
 .image {
@@ -41,9 +41,20 @@
         font-weight: bolder;
     }
 }
+@media screen and (min-width: 762px) {
+    .bigSize{
+        font-size: 48px;
+        font-weight: bolder;
+    }
+}
 
 #home{
     background-image: url(../src/images/cloudBg.png);
+    height: 680px;
+    background-repeat: no-repeat;
+}
+#home1{
+    background-image: url(../src/images/cloudDark.png);
     height: 680px;
     background-repeat: no-repeat;
 }

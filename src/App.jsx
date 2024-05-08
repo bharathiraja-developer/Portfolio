@@ -8,14 +8,15 @@ import Bottom from "../Components/Bottom";
 
 function App() {
   const [show, setShow] = useState(true);
+  const [mood, setMood] = useState(true);
   return (
     <div>
-      <Navbar setShow={setShow} />
-      <Home show={show} />
-      <About />
-      <Projects />
-      <Contact />
-      <Bottom />
+      <Navbar setShow={setShow} mood={mood} setMood={setMood} />
+      <Home show={show} mood={mood} />
+      <About mood={mood} />
+      <Projects mood={mood} />
+      <Contact mood={mood} />
+      <Bottom mood={mood} />
     </div>
   );
 }
